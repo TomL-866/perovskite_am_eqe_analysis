@@ -43,6 +43,7 @@ If you want to replace the solar spectra data with your own, keep this in mind!
 """
 
 import matplotlib.pyplot as plt
+import matplotlib
 
 import functions as f
 
@@ -68,6 +69,17 @@ def main() -> None:
     f.save_J_o_values(J_o, E_G, reported_E_G)
 
     print("Making plots...")
+    # PGF plot settings for exporting plots to LaTeX
+    matplotlib.use("pgf")
+    matplotlib.rcParams.update(
+        {
+            "pgf.texsystem": "pdflatex",
+            "font.family": "serif",
+            "font.serif": ["Times New Roman", "CMU Serif"],  #  Fallback to CMU Serif
+            "text.usetex": True,
+            "pgf.rcfonts": False,
+        }
+    )
     plt.style.use("seaborn-v0_8-bright")
     f.make_V_oc_plot(V_oc, V_oc_reported, AM, E_G)
     f.make_J_sc_plot(J_G, J_sc_reported, AM, E_G)

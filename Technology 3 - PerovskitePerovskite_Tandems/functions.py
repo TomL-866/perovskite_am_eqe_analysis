@@ -471,6 +471,8 @@ def make_V_oc_plot(
             directory_outputs = f"{os.path.dirname(__file__)}/Output/AM0"
             os.makedirs(directory_outputs, exist_ok=True)
             plt.savefig(f"{directory_outputs}/{technology_name}_V_oc_AM0.png")
+            plt.savefig(f"{directory_outputs}/pgf_plots/{technology_name}_V_oc_AM0.png")
+
             plt.close()
         else:
             plt.title(f"{technology_name}, AM{1.0 + x * 0.25}")
@@ -478,6 +480,9 @@ def make_V_oc_plot(
             os.makedirs(directory_outputs, exist_ok=True)
             plt.savefig(
                 f"{directory_outputs}/{technology_name}_V_oc_AM{1.0 + x * 0.25}.png"
+            )            
+            plt.savefig(
+                f"{directory_outputs}/pgf_plots/{technology_name}_V_oc_AM{1.0 + x * 0.25}.pgf"
             )
             plt.close()
 
@@ -575,6 +580,7 @@ def make_J_sc_plot(
             directory_outputs = f"{os.path.dirname(__file__)}/Output/AM0"
             os.makedirs(directory_outputs, exist_ok=True)
             plt.savefig(f"{directory_outputs}/{technology_name}_J_sc_AM0.png")
+            plt.savefig(f"{directory_outputs}/pgf_plots/{technology_name}_J_sc_AM0.pgf")
             plt.close()
         else:
             plt.title(f"{technology_name}, AM{1.0 + x * 0.25}")
@@ -583,6 +589,7 @@ def make_J_sc_plot(
             plt.savefig(
                 f"{directory_outputs}/{technology_name}_J_sc_AM{1.0 + x * 0.25}.png"
             )
+            plt.savefig(f"{directory_outputs}/pgf_plots/{technology_name}_J_sc_AM{1.0 + x * 0.25}.pgf")
             plt.close()
         plt.close()
 
@@ -620,4 +627,5 @@ def make_J_o_plot(J_o: np.ndarray, E_G: np.ndarray) -> None:
     directory_outputs = f"{os.path.dirname(__file__)}/Output"
     os.makedirs(directory_outputs, exist_ok=True)
     plt.savefig(f"{directory_outputs}/{technology_name}_J_0.png")
+    plt.savefig(f"{directory_outputs}/pgf_plots/{technology_name}_J_0.pgf")    
     plt.close()
