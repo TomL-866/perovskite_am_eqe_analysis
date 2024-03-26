@@ -112,11 +112,19 @@ def generate_E_G_data(EQE: np.ndarray) -> list[typing.Any]:
 
         E_G.append(energy)
 
+        colors = [
+            "#c44601",
+            "#f57600",
+            "#8babf1",
+            "#0073e6",
+            "#5ba300",
+        ]  # Store 5 colour-blind friendly colours
+
         if i == 0:
             band_gap_arr = np.array(const.h * const.c / eqe[0] / const.e)
             plt.figure()
-            plt.plot(band_gap_arr, eqe[1] * 1e20, label="EQE * 1e20")
-            plt.plot(band_gap_arr[1:], EQE_diff[i], label="dEQE/dE")
+            plt.plot(band_gap_arr, eqe[1] * 1e20, label="EQE * 1e20", color=colors[0])
+            plt.plot(band_gap_arr[1:], EQE_diff[i], label="dEQE/dE", color=colors[4])
             plt.xlabel("Band Gap Energy (eV)")
             plt.ylabel("EQE and dEQE/dE (unitless)")
             plt.legend()
