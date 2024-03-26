@@ -466,7 +466,7 @@ def make_V_oc_plot(
         if x == 0:
             # I've treated AM0 as AM 1.0 throughout because a lot of program logic
             # depends on AM 1.0 existing. This is a hack to make it so that the output
-            # does not say "AM0" but instead "AM1.0", as AM1.0 cannot physically exist.
+            # does not say "AM1.0" but instead "AM0"
             plt.title(f"{technology_name}, AM0")
             directory_outputs = f"{os.path.dirname(__file__)}/Output/AM0"
             os.makedirs(directory_outputs, exist_ok=True)
