@@ -27,7 +27,7 @@
 \begingroup%
 \makeatletter%
 \begin{pgfpicture}%
-\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{6.103436in}{4.915703in}}%
+\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{6.013698in}{4.592401in}}%
 \pgfusepath{use as bounding box, clip}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
@@ -39,9 +39,9 @@
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
 \pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
-\pgfpathlineto{\pgfqpoint{6.103436in}{0.000000in}}%
-\pgfpathlineto{\pgfqpoint{6.103436in}{4.915703in}}%
-\pgfpathlineto{\pgfqpoint{0.000000in}{4.915703in}}%
+\pgfpathlineto{\pgfqpoint{6.013698in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{6.013698in}{4.592401in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{4.592401in}}%
 \pgfpathlineto{\pgfqpoint{0.000000in}{0.000000in}}%
 \pgfpathclose%
 \pgfusepath{fill}%
@@ -168,7 +168,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=3.394938in,y=0.387555in,,top]{\color{textcolor}{\rmfamily\fontsize{20.000000}{24.000000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}Wavelength ($nm$)}}%
+\pgftext[x=3.394938in,y=0.387555in,,top]{\color{textcolor}{\rmfamily\fontsize{20.000000}{24.000000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}Wavelength (nm)}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
@@ -299,7 +299,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.419598in,y=2.644401in,,bottom,rotate=90.000000]{\color{textcolor}{\rmfamily\fontsize{20.000000}{24.000000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}Global tilted irradiance ($Wm^{-2}nm^{-1}$)}}%
+\pgftext[x=0.419598in,y=2.644401in,,bottom,rotate=90.000000]{\color{textcolor}{\rmfamily\fontsize{20.000000}{24.000000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}GTI (Wm$^{-2}$nm$^{-1}$)}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.914938in}{0.796401in}}{\pgfqpoint{4.960000in}{3.696000in}}%
@@ -6927,12 +6927,6 @@
 \pgfpathmoveto{\pgfqpoint{0.914938in}{4.492401in}}%
 \pgfpathlineto{\pgfqpoint{5.874938in}{4.492401in}}%
 \pgfusepath{stroke}%
-\end{pgfscope}%
-\begin{pgfscope}%
-\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
-\pgfsetstrokecolor{textcolor}%
-\pgfsetfillcolor{textcolor}%
-\pgftext[x=3.394938in,y=4.575734in,,base]{\color{textcolor}{\rmfamily\fontsize{24.000000}{28.800000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}Solar spectrum for different airmasses}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
