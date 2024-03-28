@@ -472,7 +472,10 @@ def make_V_oc_plot(
             os.makedirs(directory_outputs, exist_ok=True)
             plt.savefig(f"{directory_outputs}/{technology_name}_V_oc_AM0.png")
             os.makedirs(f"{directory_outputs}/pgf_plots", exist_ok=True)
-            plt.savefig(f"{directory_outputs}/pgf_plots/{technology_name}_V_oc_AM0.pgf")
+            plt.savefig(
+                f"{directory_outputs}/pgf_plots/{technology_name}_V_oc_AM0.pgf",
+                bbox_inches="tight",
+            )
 
             plt.close()
         else:
@@ -485,7 +488,8 @@ def make_V_oc_plot(
             os.makedirs(f"{directory_outputs}/pgf_plots", exist_ok=True)
 
             plt.savefig(
-                f"{directory_outputs}/pgf_plots/{technology_name}_V_oc_AM{1.0 + x * 0.25}.pgf"
+                f"{directory_outputs}/pgf_plots/{technology_name}_V_oc_AM{1.0 + x * 0.25}.pgf",
+                bbox_inches="tight",
             )
             plt.close()
 
@@ -585,7 +589,10 @@ def make_J_sc_plot(
             plt.savefig(f"{directory_outputs}/{technology_name}_J_sc_AM0.png")
             os.makedirs(f"{directory_outputs}/pgf_plots", exist_ok=True)
 
-            plt.savefig(f"{directory_outputs}/pgf_plots/{technology_name}_J_sc_AM0.pgf")
+            plt.savefig(
+                f"{directory_outputs}/pgf_plots/{technology_name}_J_sc_AM0.pgf",
+                bbox_inches="tight",
+            )
             plt.close()
         else:
             plt.title(f"{technology_name}, AM{1.0 + x * 0.25}")
@@ -597,7 +604,8 @@ def make_J_sc_plot(
             os.makedirs(f"{directory_outputs}/pgf_plots", exist_ok=True)
 
             plt.savefig(
-                f"{directory_outputs}/pgf_plots/{technology_name}_J_sc_AM{1.0 + x * 0.25}.pgf"
+                f"{directory_outputs}/pgf_plots/{technology_name}_J_sc_AM{1.0 + x * 0.25}.pgf",
+                bbox_inches="tight",
             )
             plt.close()
         plt.close()
@@ -638,5 +646,7 @@ def make_J_o_plot(J_o: np.ndarray, E_G: np.ndarray) -> None:
     plt.savefig(f"{directory_outputs}/{technology_name}_J_0.png")
     os.makedirs(f"{directory_outputs}/pgf_plots", exist_ok=True)
 
-    plt.savefig(f"{directory_outputs}/pgf_plots/{technology_name}_J_0.pgf")
+    plt.savefig(
+        f"{directory_outputs}/pgf_plots/{technology_name}_J_0.pgf", bbox_inches="tight"
+    )
     plt.close()

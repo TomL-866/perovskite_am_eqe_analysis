@@ -71,6 +71,7 @@ def main() -> None:
     print("Making plots...")
     # PGF plot settings for exporting plots to LaTeX
     matplotlib.use("pgf")
+    plt.rcParams.update({"font.size": 20})
     matplotlib.rcParams.update(
         {
             "pgf.texsystem": "pdflatex",
