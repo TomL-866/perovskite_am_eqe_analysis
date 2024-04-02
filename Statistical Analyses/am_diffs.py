@@ -6,56 +6,6 @@ import numpy as np
 from helpers import get_base_dir
 
 
-def sig_figs(x: float, precision: int):
-    """
-    Rounds a number to number of significant figures
-    Parameters:
-    - x - the number to be rounded
-    - precision (integer) - the number of significant figures
-    Returns:
-    - float
-    """
-
-    x = float(x)
-    precision = int(precision)
-
-    return round(x, -int(floor(log10(abs(x)))) + (precision - 1))
-
-
-def calculate_rounded_mean(mean: float, std: float):
-    """
-    Rounds the mean to the number of significant figures of the standard deviation
-    Parameters:
-    - mean - the mean value
-    - std - the standard deviation
-    Returns:
-    - float
-    """
-
-    std = str(std)
-    precision = len(std) - get_index_of_first_non_zero_digit(std) + 1
-
-    if str(mean)[0] == 0:
-        return round(mean, precision)
-    return sig_figs(mean, precision - 1)
-
-
-def get_index_of_first_non_zero_digit(num: float):
-    """
-    Returns the index of the first non-zero digit in a number
-    Parameters:
-    - num - the number to be checked
-    Returns:
-    - int
-    """
-
-    num = str(num)
-    for i, digit in enumerate(num):
-        if digit != "0" and digit != ".":
-            return i
-    return 0
-
-
 def diff_logic(tech_name, var_name):
     if tech_name == "MAPbI3":
         folder_num = 1
@@ -113,9 +63,9 @@ def diff_logic(tech_name, var_name):
             )
             output_df = pd.concat([output_df, temp_df], ignore_index=True)
     print(output_df)
-    os.makedirs(f"{get_base_dir()}/Statistical Analyses/Output", exist_ok=True)
+    os.makedirs(f"{get_base_dir()}/Statistical Analyses/Output/am_diffs", exist_ok=True)
     output_df.to_csv(
-        f"{get_base_dir()}/Statistical Analyses/Output/{var_name}_{tech_name}_diffs.csv"
+        f"{get_base_dir()}/Statistical Analyses/Output/am_diffs/{var_name}_{tech_name}_diffs.csv"
     )
 
 
