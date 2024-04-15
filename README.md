@@ -8,6 +8,8 @@ This README file contains instructions for building the project.
 
 To build this project, all you will need is a working installation of Python 3.10. You can download Python from the [official website](https://www.python.org/downloads/).
 
+You will also need a LaTeX compiler to build the `.pgf` plots in the program, such as MikTeX or TeX Live. You can download MikTeX from the [official website](https://miktex.org/download) and TeX Live from the [official website](https://www.tug.org/texlive/).
+
 ## Building the project
 
 The following commands are for the bash shell (Linux).
