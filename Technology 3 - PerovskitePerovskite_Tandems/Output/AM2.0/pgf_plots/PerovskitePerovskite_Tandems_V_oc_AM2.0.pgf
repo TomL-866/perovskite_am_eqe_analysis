@@ -27,7 +27,7 @@
 \begingroup%
 \makeatletter%
 \begin{pgfpicture}%
-\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{6.135335in}{4.915703in}}%
+\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{6.182602in}{4.915703in}}%
 \pgfusepath{use as bounding box, clip}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
@@ -39,8 +39,8 @@
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
 \pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
-\pgfpathlineto{\pgfqpoint{6.135335in}{0.000000in}}%
-\pgfpathlineto{\pgfqpoint{6.135335in}{4.915703in}}%
+\pgfpathlineto{\pgfqpoint{6.182602in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{6.182602in}{4.915703in}}%
 \pgfpathlineto{\pgfqpoint{0.000000in}{4.915703in}}%
 \pgfpathlineto{\pgfqpoint{0.000000in}{0.000000in}}%
 \pgfpathclose%
@@ -642,7 +642,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=3.362895in,y=4.575734in,,base]{\color{textcolor}{\rmfamily\fontsize{24.000000}{28.800000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}PerovskitePerovskite_Tandems, AM2.0}}%
+\pgftext[x=3.362895in,y=4.575734in,,base]{\color{textcolor}{\rmfamily\fontsize{24.000000}{28.800000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}Perovskite-Perovskite Tandems, AM2.0}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
