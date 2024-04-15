@@ -125,7 +125,7 @@ def generate_E_G_data(EQE: np.ndarray) -> list[typing.Any]:
             plt.figure()
             plt.plot(band_gap_arr, eqe[1] * 1e20, label="EQE * 1e20", color=colors[0])
             plt.plot(band_gap_arr[1:], EQE_diff[i], label="dEQE/dE", color=colors[4])
-            plt.xlabel("Band Gap Energy (eV)")
+            plt.xlabel("Photon Energy (eV)")
             plt.ylabel("EQE and dEQE/dE (unitless)")
             plt.legend()
             plt.savefig(
