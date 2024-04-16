@@ -467,7 +467,7 @@ def make_V_oc_plot(
             # I've treated AM0 as AM 1.0 throughout because a lot of program logic
             # depends on AM 1.0 existing. This is a hack to make it so that the output
             # does not say "AM1.0" but instead "AM0"
-            plt.title(f"Perovskite-Perovskite Tandems, AM0")
+            plt.title(f"{technology_name}, AM0")
             directory_outputs = f"{os.path.dirname(__file__)}/Output/AM0"
             os.makedirs(directory_outputs, exist_ok=True)
             plt.savefig(f"{directory_outputs}/{technology_name}_V_oc_AM0.png")
@@ -479,7 +479,7 @@ def make_V_oc_plot(
 
             plt.close()
         else:
-            plt.title(f"Perovskite-Perovskite Tandems, AM{1.0 + x * 0.25}")
+            plt.title(f"{technology_name}, AM{1.0 + x * 0.25}")
             directory_outputs = f"{os.path.dirname(__file__)}/Output/AM{1.0 + x * 0.25}"
             os.makedirs(directory_outputs, exist_ok=True)
             plt.savefig(
@@ -583,7 +583,7 @@ def make_J_sc_plot(
             # I've treated AM0 as AM 1.0 throughout because a lot of program logic
             # depends on AM 1.0 existing. This is a hack to make it so that the output
             # does not say "AM0" but instead "AM1.0", as AM1.0 cannot physically exist.
-            plt.title(f"Perovskite-Perovskite Tandems, AM0")
+            plt.title(f"{technology_name}, AM0")
             directory_outputs = f"{os.path.dirname(__file__)}/Output/AM0"
             os.makedirs(directory_outputs, exist_ok=True)
             plt.savefig(f"{directory_outputs}/{technology_name}_J_sc_AM0.png")
@@ -595,7 +595,7 @@ def make_J_sc_plot(
             )
             plt.close()
         else:
-            plt.title(f"Perovskite-Perovskite Tandems, AM{1.0 + x * 0.25}")
+            plt.title(f"{technology_name}, AM{1.0 + x * 0.25}")
             directory_outputs = f"{os.path.dirname(__file__)}/Output/AM{1.0 + x * 0.25}"
             os.makedirs(directory_outputs, exist_ok=True)
             plt.savefig(
@@ -635,11 +635,11 @@ def make_J_o_plot(J_o: np.ndarray, E_G: np.ndarray) -> None:
         label="Theoretical limit",
     )
 
-    plt.ylim(0, max(J_o) + 1e-20)
+    plt.ylim(0, max(J_o) + max(J_o) * 0.1)
     plt.xlim(min(E_G) - 0.005, max(E_G) + 0.005)
     plt.xlabel("Simulated band gap energy (eV)")
     plt.ylabel("$J_{0}$ (A/m$^2$)")
-    plt.title(f"Perovskite-Perovskite Tandems")
+    plt.title(f"{technology_name}")
     plt.legend()
     directory_outputs = f"{os.path.dirname(__file__)}/Output"
     os.makedirs(directory_outputs, exist_ok=True)

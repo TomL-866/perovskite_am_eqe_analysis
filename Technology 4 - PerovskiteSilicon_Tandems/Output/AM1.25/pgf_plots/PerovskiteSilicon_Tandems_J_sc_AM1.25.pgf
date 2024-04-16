@@ -27,7 +27,7 @@
 \begingroup%
 \makeatletter%
 \begin{pgfpicture}%
-\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{5.956641in}{4.915703in}}%
+\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{5.909374in}{4.915703in}}%
 \pgfusepath{use as bounding box, clip}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
@@ -39,8 +39,8 @@
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
 \pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
-\pgfpathlineto{\pgfqpoint{5.956641in}{0.000000in}}%
-\pgfpathlineto{\pgfqpoint{5.956641in}{4.915703in}}%
+\pgfpathlineto{\pgfqpoint{5.909374in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{5.909374in}{4.915703in}}%
 \pgfpathlineto{\pgfqpoint{0.000000in}{4.915703in}}%
 \pgfpathlineto{\pgfqpoint{0.000000in}{0.000000in}}%
 \pgfpathclose%
@@ -602,7 +602,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=3.316590in,y=4.575734in,,base]{\color{textcolor}{\rmfamily\fontsize{24.000000}{28.800000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}Perovskite-Silicon Tandems, AM1.25}}%
+\pgftext[x=3.316590in,y=4.575734in,,base]{\color{textcolor}{\rmfamily\fontsize{24.000000}{28.800000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}PerovskiteSilicon_Tandems, AM1.25}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%

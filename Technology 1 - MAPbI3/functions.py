@@ -635,7 +635,7 @@ def make_J_o_plot(J_o: np.ndarray, E_G: np.ndarray) -> None:
         label="Theoretical limit",
     )
 
-    plt.ylim(0, max(J_o) + 1e-18)
+    plt.ylim(0, max(J_o) + max(J_o) * 0.1)
     plt.xlim(min(E_G) - 0.005, max(E_G) + 0.005)
     plt.xlabel("Simulated band gap energy (eV)")
     plt.ylabel("$J_{0}$ (A/m$^2$)")
