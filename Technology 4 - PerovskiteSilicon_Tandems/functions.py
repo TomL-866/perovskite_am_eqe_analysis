@@ -639,7 +639,7 @@ def make_J_o_plot(J_o: np.ndarray, E_G: np.ndarray) -> None:
     plt.xlim(min(E_G) - 0.005, max(E_G) + 0.005)
     plt.xlabel("Simulated band gap energy (eV)")
     plt.ylabel("$J_{0}$ (A/m$^2$)")
-    plt.title(f"{technology_name}")
+    plt.title(f"Perovskite-Silicon Tandems")
     plt.legend()
     directory_outputs = f"{os.path.dirname(__file__)}/Output"
     os.makedirs(directory_outputs, exist_ok=True)
